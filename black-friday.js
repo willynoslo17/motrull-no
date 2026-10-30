@@ -12,6 +12,8 @@ function render(){var n=q?now:Date.now();if(n>=start||live){txt.innerHTML="<b>BL
 else{txt.innerHTML="<b>BLACK FRIDAY</b> starter om <span aria-live='off'>"+fmt(start-n)+"</span> · <a href='/black-friday' style='color:#fff'>Se kampanjevarene</a>";}}
 render();if(!live&&!q)setInterval(render,1000);
 document.body.insertBefore(bar,document.body.firstChild);
+var FP={"setetrekk-og-sittepute-for-bil-095e52f9": [779, 623], "koppholder-med-mobilholder-for-bil-c2f6b8b8": [729, 583], "tykt-lofritt-mikrofiberhandkle-i-svart-15852132": [479, 383], "setetrekk-i-lin-for-bil-540a6fb8": [469, 375], "borste-for-rengjoring-av-bilens-understell-3bf177ba": [459, 367], "flettet-mikrofiberklut-for-bilvask-14992348": [449, 359], "u-formet-sittepute-i-memoryskum-for-bil-14662166": [439, 351], "tykt-og-lofritt-mikrofiberhandkle-for-bil-24072003": [429, 343], "beskyttelsesdeksel-for-bilnokkel-4c703c4b": [419, 335], "soppelbotte-for-bil-15866391": [419, 335], "sittepute-i-skinn-for-bil-8acde90d": [419, 335], "oppbevaringsboks-for-spalten-ved-bilsetet-16037511": [399, 319], "oppbevaringsboks-for-setespalten-13593200": [369, 295], "beskyttelsespute-for-bildoren-13756593": [359, 287]};/*fp*/
+(function(){var m=location.pathname.match(/^\/p\/([^\/?#]+)/);if(!m||!live)return;var f=FP[m[1]];var pe=document.querySelector('.pp-price');if(!f||!pe)return;pe.innerHTML="<span style='color:#b91c1c'>"+f[1]+" kr</span> <small style='font-size:14px;font-weight:400;color:#555'>med koden "+B.code+" · Førpris (laveste pris siste 30 dager): <s>"+f[0]+" kr</s></small>";})();
 if(/\/black-friday/.test(location.pathname))return;
 var KEY="bf2026_popup_closed";try{if(localStorage.getItem(KEY))return;}catch(e){}
 setTimeout(function(){

@@ -73,7 +73,6 @@
     return productById(id);
   }
 
-  /* Saved cart lines whose product has not loaded yet (background suppliers such as Gelato). */
   let pendingCart = {};
 
   function saveCartSoon() {
@@ -131,16 +130,11 @@
     applySearch();
   }
 
-  function isPeruStore() {
-    const p = (location.pathname || "").replace(/\/+$/, "") || "/";
-    return p === "/pe" || p.indexOf("/pe/") === 0;
-  }
-
   function addTrustAndSeo() {
     if (!document.querySelector('meta[name="theme-color"]')) {
       const theme = document.createElement("meta");
       theme.name = "theme-color";
-      theme.content = isPeruStore() ? "#111827" : "#1C1F23";
+      theme.content = "#1C1F23";
       document.head.appendChild(theme);
     }
     const grid = document.getElementById("products");
@@ -148,17 +142,13 @@
       const notice = document.createElement("p");
       notice.id = "nordicPriceNotice";
       notice.style.cssText = "font-size:12px;line-height:1.5;opacity:.72;margin:0 0 14px";
-      notice.innerHTML = isPeruStore()
-        ? 'Todos los precios en PEN incluyen IGV (18 %). Envío S/ 14 por pedido a todo el Perú. El total se muestra antes del pago. <a href="/pe/envios">Envíos</a> · <a href="/pe/cambios">Cambios y devoluciones</a>.'
-        : 'Alle priser i NOK er inkl. 25 % MVA. Frakt 79 kr per ordre i Norge · gratis frakt over 999 kr. Totalpris vises før betaling. <a href="/frakt-og-levering">Leveringstid</a> · <a href="/angrerett">14 dagers angrerett</a>.';
+      notice.innerHTML = 'Alle priser i NOK er inkl. 25 % MVA. Frakt 79 kr per ordre i Norge · gratis frakt over 999 kr. Totalpris vises før betaling. <a href="/frakt-og-levering">Leveringstid</a> · <a href="/angrerett">14 dagers angrerett</a>.';
       grid.parentNode.insertBefore(notice, grid);
     }
     const schema = document.createElement("script");
     schema.type = "application/ld+json";
     schema.textContent = JSON.stringify(
-      isPeruStore()
-        ? {"@context":"https://schema.org","@type":"OnlineStore","name":BRAND,"url":SITE_URL + "pe/","areaServed":"PE","currenciesAccepted":"PEN","inLanguage":"es"}
-        : {"@context":"https://schema.org","@type":"OnlineStore","name":BRAND,"url":SITE_URL,"areaServed":"NO","currenciesAccepted":"NOK","inLanguage":"nb"}
+      {"@context":"https://schema.org","@type":"OnlineStore","name":BRAND,"url":SITE_URL,"areaServed":"NO","currenciesAccepted":"NOK","inLanguage":"nb"}
     );
     document.head.appendChild(schema);
     const count = document.getElementById("count");
@@ -187,7 +177,7 @@
         trigger.disabled = true;
         trigger.setAttribute("aria-disabled", "true");
         trigger.onclick = null;
-        trigger.textContent = isPeruStore() ? "PRÓXIMAMENTE" : "KOMMER SNART";
+        trigger.textContent = "KOMMER SNART";
       }
       const pausedForm = document.getElementById("checkoutForm");
       if (pausedForm) pausedForm.onsubmit = event => { event.preventDefault(); };
@@ -199,8 +189,8 @@
       form = document.getElementById("checkoutForm");
       document.getElementById("checkoutClose").onclick = () => document.getElementById("checkoutModal").classList.remove("open");
     }
-    /* Norwegian storefront: delivery to Norway only (Peru lives under /pe/). */
-    if (!isPeruStore()) {
+    /* Norwegian storefront: delivery to Norway only. */
+    {
       const country = form.querySelector('select[name="country"], #country');
       if (country) {
         country.innerHTML = '<option value="Norway">Norge</option>';

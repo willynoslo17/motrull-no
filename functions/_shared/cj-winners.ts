@@ -308,7 +308,7 @@ function gridRow(pid: string, live: any, sector: string, region: WinnerRegion): 
     image: String(snap.image),
     supplierPriceUsd: cost,
     supplierPriceMaxUsd: cost,
-    brand: "CJ Dropshipping",
+    brand: "Motrull",
     supplier: "CJ Dropshipping",
     provider: "cj",
     hasCECertification: false,

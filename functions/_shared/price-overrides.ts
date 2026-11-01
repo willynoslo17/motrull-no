@@ -11,7 +11,7 @@ export const HIDDEN = new Set<string>(["1399278834032971776", "763683FD-449B-451
 export const CERT_ONLY = true;
 export const CERTIFIED = new Set<string>(["2603190400471622600", "2080211980367716353", "pfy-auto-tote", "pfy-auto-poster-art", "pfy-auto-poster-type", "pfy-auto-journal", "pfy-auto-sticker", "pfy-auto-mousepad", "pfy-auto-tee-black-s", "pfy-auto-tee-black-m", "pfy-auto-tee-black-l", "pfy-auto-tee-black-xl", "pfy-auto-hoodie-black-s", "pfy-auto-hoodie-black-m", "pfy-auto-hoodie-black-l", "pfy-auto-hoodie-black-xl"]);
 
-/* 2026-11-01 owner rule: price under the cheapest comparable Norwegian product (total incl. 79 kr shipping), always with profit. Per CJ variant (vid). */
+/* 2026-11-01 16:13 owner rule (replaces "under market"): price = SAME total as the most comparable Norwegian product (incl. shipping), always with profit; discounts only when owner says. Per CJ variant (vid). */
 export const VARIANT_PRICE: Record<string, number> = {"2603190400471623500": 389, "2080211980464185345": 349, "2080211980464185346": 369};
 
 /* 2026-11-01: CJ variants NOT sold because the certificate does not cover that model / plug type (US/UK/AU) / unknown set content. */

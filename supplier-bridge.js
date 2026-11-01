@@ -357,7 +357,7 @@
   /* Storefront rule (owner, 2026-10-02): every product that has an image is shown. */
   /* 2026-10-31 (sincert): only products with a confirmed certificate are shown. Restore with restaurar_por_sku.py. */
   const NORDIC_CERT_ONLY = true;
-  const NORDIC_CERTIFIED = new Set(["2603190400471622600", "CJYD279409501AZ", "2080211980367716353", "CJQT300198801AZ"]);
+  const NORDIC_CERTIFIED = new Set(["2603190400471622600", "CJYD279409501AZ", "2080211980367716353", "CJQT300198801AZ", "12436038847392804198", "12625498217304657306", "17497779195092248342", "18156769406899166452", "18185599519595958213", "19876027541174932530", "20950705573832293124", "31131812918865260297", "32157695974756034277", "33777351803449288591", "36339202865257948943", "84238117980641572744", "96008724411669092953", "96452992005585258301", "pfy-auto-hoodie-black-l", "pfy-auto-hoodie-black-m", "pfy-auto-hoodie-black-s", "pfy-auto-hoodie-black-xl", "pfy-auto-journal", "pfy-auto-mousepad", "pfy-auto-poster-art", "pfy-auto-poster-type", "pfy-auto-sticker", "pfy-auto-tee-black-l", "pfy-auto-tee-black-m", "pfy-auto-tee-black-s", "pfy-auto-tee-black-xl", "pfy-auto-tote"]);
   function certified(item) { return !NORDIC_CERT_ONLY || [item.externalId, item.cjPid, item.id, item.sku].some(v => v != null && NORDIC_CERTIFIED.has(String(v))); }
   function storefrontItem() {
     return item => Boolean(item && item.image && certified(item));

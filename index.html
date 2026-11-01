@@ -650,7 +650,7 @@ function setFilter(c){filter=c;renderFilters();renderProducts();renderBestseller
 
 function renderProducts(){
   const list=matchedList();
-  $('#products').innerHTML=list.length?list.map((p,i)=>productCard(p,i)).join(''):'<p class="muted">Produktene lastes inn. Vises ingenting, prøv igjen om litt.</p>';
+  $('#products').innerHTML=list.length?list.map((p,i)=>productCard(p,i)).join(''):'<p class="muted">Nye produkter kommer snart.</p>';
 }
 
 function renderBestsellers(){

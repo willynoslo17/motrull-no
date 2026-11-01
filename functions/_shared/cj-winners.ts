@@ -33,6 +33,7 @@ type Snapshot = {
   image: string;
   supplierPriceMaxUsd: number;
   keyword?: string;
+  description?: string;
 };
 type RegionFilters = { minUsd?: number; maxUsd?: number; include?: string; exclude?: string };
 type WinnersConfig = {
@@ -293,7 +294,7 @@ function gridRow(pid: string, live: any, sector: string, region: WinnerRegion): 
   };
   if (live && live.image && liveCost > 0 && (snap || eligible(live, region))) {
     const base = snap
-      ? { ...live, name: snap.name, category: snap.category || live.category, cat: snap.category || live.cat }
+      ? { ...live, name: snap.name, category: snap.category || live.category, cat: snap.category || live.cat, ...(snap.description ? { description: snap.description } : {}) }
       : live;
     return localize(base);
   }
@@ -314,6 +315,7 @@ function gridRow(pid: string, live: any, sector: string, region: WinnerRegion): 
     hasCECertification: false,
     compliance: "EU/Nordic curated — no fake medical/drug/CE-toy claims",
     keyword: snap.keyword || "",
+    ...(snap.description ? { description: String(snap.description) } : {}),
     region: productRegion(pid),
   });
 }

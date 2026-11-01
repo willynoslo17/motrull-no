@@ -40,6 +40,8 @@
     "scooter accessories"
   ],
   "pids": [
+    "2080211980367716353",
+    "2603190400471622600",
     "1386925350814093312",
     "763683FD-449B-4519-872F-6FADF3FAD720",
     "1803978693954916352",
@@ -1213,6 +1215,30 @@
       "nameEs": "Moldura brillante decorativa",
       "descEs": "Listón decorativo para personalizar el interior o exterior.",
       "categoryEs": "Accesorios auto"
+    },
+    {
+      "id": "2603190400471622600",
+      "sku": "CJYD279409501AZ",
+      "name": "Trådløs dekkpumpe med lys og trykkmåler (oppladbar)",
+      "nameEn": "Multi-function Portable Car USB Charger",
+      "category": "Bilutstyr",
+      "image": "https://oss-cf.cjdropshipping.com/product/2026/03/19/03/6d98f041-1bb1-40d6-aeaf-0a1ba9319c1e_trans.jpeg",
+      "supplierPriceMaxUsd": 15.75,
+      "keyword": "",
+      "description": "Oppladbar luftkompressor for bil-, sykkel- og balldekk. Trykkmåler, arbeidslys og varsellys, USB-C-lading. Batteri 14,8 V 1500 mAh. Kompressor ST-9654-serien med CE (EMC) og RoHS-dokumentasjon.",
+      "certified": "2026-11-01"
+    },
+    {
+      "id": "2080211980367716353",
+      "sku": "CJQT300198801AZ",
+      "name": "Trådløs mini bilstøvsuger og luftpumpe 2-i-1 med LED-lys",
+      "nameEn": "Mini Cordless Handheld Car Vacuum Inflator Combo With LED Light, Powerful Suction",
+      "category": "Bilutstyr",
+      "image": "https://cf.cjdropshipping.com/b228f9e7-d8dc-4dc2-b36a-fbba80028cde.jpg",
+      "supplierPriceMaxUsd": 16.15,
+      "keyword": "",
+      "description": "Håndholdt, oppladbar 2-i-1: kraftig støvsuger for bilen og luftpumpe, med LED-lys. CE (EMC) og RoHS-dokumentasjon fra leverandøren for samme modellserie.",
+      "certified": "2026-11-01"
     }
   ],
   "pe": {

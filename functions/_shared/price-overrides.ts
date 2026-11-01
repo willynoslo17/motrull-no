@@ -9,7 +9,7 @@ export const HIDDEN = new Set<string>(["1399278834032971776", "763683FD-449B-451
 /* 2026-10-31 (sincert): CERT_ONLY = true -> ONLY ids listed in CERTIFIED are shown/sellable (all providers: CJ, Printify, Printful, Gelato).
  * Restore per SKU with /workspace/negocios/restaurar_por_sku.py (adds the id here and removes it from HIDDEN). */
 export const CERT_ONLY = true;
-export const CERTIFIED = new Set<string>(["2603190400471622600", "2080211980367716353", "pfy-auto-tote", "pfy-auto-poster-art", "pfy-auto-poster-type", "pfy-auto-journal", "pfy-auto-sticker", "pfy-auto-mousepad", "pfy-auto-tee-black-s", "pfy-auto-tee-black-m", "pfy-auto-tee-black-l", "pfy-auto-tee-black-xl", "pfy-auto-hoodie-black-s", "pfy-auto-hoodie-black-m", "pfy-auto-hoodie-black-l", "pfy-auto-hoodie-black-xl"]);
+export const CERTIFIED = new Set<string>(["2603190400471622600", "2080211980367716353", "pfy-auto-tote", "pfy-auto-poster-art", "pfy-auto-poster-type", "pfy-auto-journal", "pfy-auto-sticker", "pfy-auto-mousepad", "pfy-auto-tee-black-s", "pfy-auto-tee-black-m", "pfy-auto-tee-black-l", "pfy-auto-tee-black-xl", "pfy-auto-hoodie-black-s", "pfy-auto-hoodie-black-m", "pfy-auto-hoodie-black-l", "pfy-auto-hoodie-black-xl", "pfy-auto-mug-std", "pfy-auto-mug-eu"]);
 
 /* 2026-11-01 16:13 owner rule (replaces "under market"): price = SAME total as the most comparable Norwegian product (incl. shipping), always with profit; discounts only when owner says. Per CJ variant (vid). */
 export const VARIANT_PRICE: Record<string, number> = {"2603190400471623500": 389, "2080211980464185345": 349, "2080211980464185346": 369};
@@ -21,4 +21,4 @@ export const EXCLUDED_VIDS = new Set<string>([]);
 export const DEFAULT_VID: Record<string, string> = {"2603190400471622600": "2603190400471623500", "2080211980367716353": "2080211980464185345"};
 
 /* Printify (01.11): fast pris = vanlig norsk markedspris for tilsvarende POD-vare; hver pris gir fortjeneste også ved fri frakt (pris*0.77 > (kost+frakt)*10.8). */
-export const PRINTIFY_PRICE: Record<string, number> = {"pfy-auto-tote": 299, "pfy-auto-poster-art": 229, "pfy-auto-poster-type": 229, "pfy-auto-journal": 259, "pfy-auto-sticker": 149, "pfy-auto-mousepad": 249, "pfy-auto-tee-black-s": 299, "pfy-auto-tee-black-m": 299, "pfy-auto-tee-black-l": 299, "pfy-auto-tee-black-xl": 299, "pfy-auto-hoodie-black-s": 649, "pfy-auto-hoodie-black-m": 649, "pfy-auto-hoodie-black-l": 649, "pfy-auto-hoodie-black-xl": 649};
+export const PRINTIFY_PRICE: Record<string, number> = {"pfy-auto-tote": 299,"pfy-auto-poster-art": 229,"pfy-auto-poster-type": 229,"pfy-auto-journal": 259,"pfy-auto-sticker": 149,"pfy-auto-mousepad": 249,"pfy-auto-tee-black-s": 299,"pfy-auto-tee-black-m": 299,"pfy-auto-tee-black-l": 299,"pfy-auto-tee-black-xl": 299,"pfy-auto-hoodie-black-s": 649,"pfy-auto-hoodie-black-m": 649,"pfy-auto-hoodie-black-l": 649,"pfy-auto-hoodie-black-xl": 649,"pfy-auto-mug-std": 159,"pfy-auto-mug-eu": 159};

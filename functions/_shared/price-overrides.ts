@@ -8,8 +8,9 @@ export const HIDDEN = new Set<string>(["1399278834032971776", "763683FD-449B-451
 
 /* 2026-10-31 (sincert): CERT_ONLY = true -> ONLY ids listed in CERTIFIED are shown/sellable (all providers: CJ, Printify, Printful, Gelato).
  * Restore per SKU with /workspace/negocios/restaurar_por_sku.py (adds the id here and removes it from HIDDEN). */
+/* 2026-11-02: Printify-krus og barne-t-skjorter skjult igjen: ingen dokumentasjon (EU 1935/2004/LFGB for krus; EN 14682/REACH for barneklær). */
 export const CERT_ONLY = true;
-export const CERTIFIED = new Set<string>(["2603190400471622600", "2080211980367716353", "pfy-auto-tote", "pfy-auto-poster-art", "pfy-auto-poster-type", "pfy-auto-journal", "pfy-auto-sticker", "pfy-auto-mousepad", "pfy-auto-tee-black-s", "pfy-auto-tee-black-m", "pfy-auto-tee-black-l", "pfy-auto-tee-black-xl", "pfy-auto-hoodie-black-s", "pfy-auto-hoodie-black-m", "pfy-auto-hoodie-black-l", "pfy-auto-hoodie-black-xl", "pfy-auto-mug-std", "pfy-auto-mug-eu"]);
+export const CERTIFIED = new Set<string>(["2603190400471622600", "2080211980367716353", "pfy-auto-tote", "pfy-auto-poster-art", "pfy-auto-poster-type", "pfy-auto-journal", "pfy-auto-sticker", "pfy-auto-mousepad", "pfy-auto-tee-black-s", "pfy-auto-tee-black-m", "pfy-auto-tee-black-l", "pfy-auto-tee-black-xl", "pfy-auto-hoodie-black-s", "pfy-auto-hoodie-black-m", "pfy-auto-hoodie-black-l", "pfy-auto-hoodie-black-xl"]);
 
 /* 2026-11-01 16:13 owner rule (replaces "under market"): price = SAME total as the most comparable Norwegian product (incl. shipping), always with profit; discounts only when owner says. Per CJ variant (vid). */
 export const VARIANT_PRICE: Record<string, number> = {"2603190400471623500": 389, "2080211980464185345": 349, "2080211980464185346": 369};
